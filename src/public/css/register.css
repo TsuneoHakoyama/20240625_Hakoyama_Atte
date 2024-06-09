@@ -1,0 +1,52 @@
+.register__form {
+    padding: 50px 0;
+}
+
+.input__form {
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.register__title {
+    margin: 0;
+    padding: 30px 20px 20px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.input__item, .input__button {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.input__name, .input__email, .input__password, .input__password-confirm {
+    width: 80%;
+    height: 6vh;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    border: 2px solid #808080;
+    border-radius: 5px;
+    background-color: #eeeeee;
+}
+
+.submit__button {
+    width: 80%;
+    height: 6vh;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid #0000ff;
+    border-radius: 5px;
+    background-color: #0000ff;
+    color: #ffffff;
+}
+
+.link__login {
+    font-size: 16px;
+}
+
+.link__description {
+    margin: 20px 0 0;
+}
