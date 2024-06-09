@@ -1,0 +1,55 @@
+.button {
+    margin-left: 80px;
+}
+
+.navigation__button {
+    background-color: #ffffff;
+    border: none;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.table__form {
+    width: 70vw;
+    height: 55vh;
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.user-table {
+    width: 100%;
+}
+
+tr {
+    height: 90px;
+    border-top: 1px solid #808080;
+    line-height: 0.8;
+}
+
+th, td {
+    height: 50px;
+    text-align: left;
+    padding: 10px 0 10px 100px;
+}
+
+.detail {
+    padding: 10px;
+    border: 1px solid #0d6efd;
+    border-radius: 5px;
+    background-color: #0d6efd;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.pagination {
+    margin-top: 30px;
+    text-align: center;
+    display: block;
+}
+
+.pagination li {
+    display: inline-block;
+    margin: 0 auto;
+}

@@ -9,17 +9,17 @@
 @endsection
 
 @section('navigation')
-<form action="/" method="get">
-    @csrf
-    <div class="button">
-        <button class="navigation__button" type="submit">ホーム</button>
-    </div>
-</form>
 <form action="/attendance" method="get">
     @csrf
     <div class="button">
         <button class="navigation__button" type="submit">日付一覧</button>
         <input type="hidden" name="date" value="">
+    </div>
+</form>
+<form action="/users" method="get">
+    @csrf
+    <div class="button">
+        <button class="navigation__button" type="submit">ユーザー一覧</button>
     </div>
 </form>
 <form action="/logout" method="post">

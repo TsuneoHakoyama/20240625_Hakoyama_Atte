@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\BreakTimeController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +28,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/work_end', [AttendanceController::class, 'workEndRecord']);
     Route::post('/break_start', [BreakTimeController::class, 'breakStartRecord']);
     Route::post('/break_end', [BreakTimeController::class, 'breakEndRecord']);
+    Route::get('/users', [UserController::class, 'showUserList']);
+    Route::get('/users/attendance', [UserController::class, 'showUserAttendance']);
 });
