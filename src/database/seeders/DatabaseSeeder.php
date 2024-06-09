@@ -2,10 +2,11 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use Database\Seeders\AttendancesTableSeeder;
 use Database\Seeders\BreakTimesTableSeeder;
 use Database\Seeders\UsersTableSeeder;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\App;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,8 +17,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(UsersTableSeeder::class);
-        $this->call(AttendancesTableSeeder::class);
-        $this->call(BreakTimesTableSeeder::class);
+        if (App::environment('local')) {
+            $this->call(UsersTableSeeder::class);
+            $this->call(AttendancesTableSeeder::class);
+            $this->call(BreakTimesTableSeeder::class);
+        }
     }
 }
