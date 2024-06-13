@@ -33,7 +33,7 @@
 ###### MailHog
 
 ## テーブル設計
-![table-design](https://github.com/TsuneoHakoyama/Atte/assets/155647560/d38b3bc0-52b4-4958-a43a-92f01b23b8ae)
+![table-design](https://github.com/TsuneoHakoyama/Atte/assets/155647560/6e261c54-d238-445e-b85b-da8464ca5ce6)
 
 ## ER図
    <-- 作成したER図の画像 -->
