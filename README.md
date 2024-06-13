@@ -36,13 +36,13 @@
 ![table-design](https://github.com/TsuneoHakoyama/Atte/assets/155647560/6e261c54-d238-445e-b85b-da8464ca5ce6)
 
 ## ER図
-   <-- 作成したER図の画像 -->
+![ER](https://github.com/TsuneoHakoyama/Atte/assets/155647560/0e5513f9-d347-40af-bb1d-2b4cfc012516)
    
 ## 環境構築
 ###### Dockerビルド
 ###### 1. git clone git@github.com:TsuneoHakoyama/Atte.git
 ###### 2. docker compose up -d --build 
-   
+######   
 ###### Laravel環境構築
 ###### 1. docker compose exec php bash
 ###### 2. composer install
