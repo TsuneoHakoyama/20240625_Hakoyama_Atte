@@ -40,8 +40,8 @@
    
 ## 環境構築
 ###### Dockerビルド
-###### 1. git clone git@github.com:TsuneoHakoyama/First-project-test.git
-###### 2. docker compose up -d --build <- MailHogというコンテナ名は既に使われているというerrorで停止 <- compose.yamlのmailでcontainer_nameを指定するのをやめると解決
+###### 1. git clone git@github.com:TsuneoHakoyama/Atte.git
+###### 2. docker compose up -d --build 
    
 ###### Laravel環境構築
 ###### 1. docker compose exec php bash
