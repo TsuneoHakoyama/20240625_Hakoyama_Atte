@@ -4,16 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Attendance;
 use App\Models\BreakTime;
-use App\Models\User;
 use Carbon\Carbon;
-use DateInterval;
 use DateTime;
 use Illuminate\Http\Request;
-use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Optional;
 
 class AttendanceController extends Controller
+
 {
     //打刻ページの表示
     public function show()
@@ -157,7 +154,6 @@ class AttendanceController extends Controller
 
             $formattedTime = $this->secondsToHms($totalSeconds);
             $formattedTimes[] = $formattedTime;
-            //dd($formattedTimes);
         }
 
         if (empty($formattedTimes)) {
@@ -165,15 +161,6 @@ class AttendanceController extends Controller
         }
 
         return view('attendance', compact('date', 'attendances', 'formattedTimes'));
-    }
-
-    public function secondsToHms($totalSeconds)
-    {
-        $hours = floor($totalSeconds / 3600);
-        $minutes = floor(($totalSeconds % 3600) / 60);
-        $seconds = $totalSeconds % 60;
-
-        return sprintf('%02d:%02d:%02d', $hours, $minutes, $seconds);
     }
 
     //翌日データの表示
@@ -200,7 +187,6 @@ class AttendanceController extends Controller
 
             $formattedTime = $this->secondsToHms($totalSeconds);
             $formattedTimes[] = $formattedTime;
-            //dd($formattedTimes);
         }
 
         if (empty($formattedTimes)) {
@@ -208,5 +194,15 @@ class AttendanceController extends Controller
         }
 
         return view('attendance', compact('date', 'attendances', 'formattedTimes'));
+    }
+
+    //総休憩時間の表示形式変換
+    public function secondsToHms($totalSeconds)
+    {
+        $hours = floor($totalSeconds / 3600);
+        $minutes = floor(($totalSeconds % 3600) / 60);
+        $seconds = $totalSeconds % 60;
+
+        return sprintf('%02d:%02d:%02d', $hours, $minutes, $seconds);
     }
 }

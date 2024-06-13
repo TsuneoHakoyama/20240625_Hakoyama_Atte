@@ -49,6 +49,7 @@ class UserController extends Controller
         return view('user-attendance', compact('attendances', 'formattedTimes'));
     }
 
+    //総休憩時間の表示形式変換
     public function secondsToHms($totalSeconds)
     {
         $hours = floor($totalSeconds / 3600);
