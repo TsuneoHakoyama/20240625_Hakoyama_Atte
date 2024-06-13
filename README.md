@@ -1,6 +1,6 @@
 # Atte
 ###### 概要:勤怠管理アプリ
- <-- トップ画面の画像 -->
+![localhost_](https://github.com/TsuneoHakoyama/Atte/assets/155647560/bd329cec-3e30-46be-bc76-121dbfb001eb)
  
 ## 作成目的
 ###### 人事評価に必要な勤怠管理アプリの導入
