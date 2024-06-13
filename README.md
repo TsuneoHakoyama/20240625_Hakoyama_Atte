@@ -8,7 +8,7 @@
 ## アプリケーションURL
 ###### 開発環境：http://localhost/
 ###### phpMyAdmin: http://localhost:8080
-###### MailHog: http//localhost:8025
+###### MailHog: http://localhost:8025
 
 ## 他のリポジトリ
 ###### なし
