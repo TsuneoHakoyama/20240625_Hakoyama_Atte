@@ -40,10 +40,10 @@ Route::middleware(['auth','verified'])->group(function () {
     Route::get('/attendance', [AttendanceController::class, 'showTable']);
     Route::get('/attendance/previous', [AttendanceController::class, 'showTablePreviousDay']);
     Route::get('/attendance/next', [AttendanceController::class, 'showTableNextDay']);
-    Route::post('/work_start', [AttendanceController::class, 'workStartRecord']);
-    Route::post('/work_end', [AttendanceController::class, 'workEndRecord']);
-    Route::post('/break_start', [BreakTimeController::class, 'breakStartRecord']);
-    Route::post('/break_end', [BreakTimeController::class, 'breakEndRecord']);
+    Route::post('/work-start', [AttendanceController::class, 'workStartRecord']);
+    Route::post('/work-end', [AttendanceController::class, 'workEndRecord']);
+    Route::post('/break-start', [BreakTimeController::class, 'breakStartRecord']);
+    Route::post('/break-end', [BreakTimeController::class, 'breakEndRecord']);
     Route::get('/users', [UserController::class, 'showUserList']);
     Route::get('/users/attendance', [UserController::class, 'showUserAttendance']);
 });

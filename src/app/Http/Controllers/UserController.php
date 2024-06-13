@@ -13,7 +13,7 @@ class UserController extends Controller
     //ユーザー一覧の表示
     public function showUserList()
     {
-        $users = User::orderBy('id', 'asc')->paginate(6);
+        $users = User::orderBy('id', 'asc')->paginate(5);
 
         return view('user', compact('users'));
     }

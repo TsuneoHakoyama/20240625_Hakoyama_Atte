@@ -46,7 +46,7 @@
                 <!-- 勤務中の場合 -->
                 @if($work_status === 'on_duty')
                 <div class="work__start">
-                    <form action="/work_start" method="post">
+                    <form action="/work-start" method="post">
                         @csrf
                         <button class="submit__button" disabled>勤務開始</button>
                     </form>
@@ -54,19 +54,19 @@
                 <!-- 勤務中かつ休憩中の場合 -->
                 @if($break_status === 'on_my_break')
                 <div class="work__end">
-                    <form action="/work_end" method="post">
+                    <form action="/work-end" method="post">
                         @csrf
                         <button class="submit__button" disabled>勤務終了</button>
                     </form>
                 </div>
                 <div class="break_start">
-                    <form action="/break_start" method="post">
+                    <form action="/break-start" method="post">
                         @csrf
                         <button class="submit__button" disabled>休憩開始</button>
                     </form>
                 </div>
                 <div class="break_end">
-                    <form action="/break_end" method="post">
+                    <form action="/break-end" method="post">
                         @csrf
                         <button class="submit__button" type="submit">休憩終了</button>
                         <input type="hidden" name="id" value="{{ $record->id}}">
@@ -75,20 +75,20 @@
                 @else
                 <!-- 勤務中で休憩中ではない場合 -->
                 <div class="work__end">
-                    <form action="/work_end" method="post">
+                    <form action="/work-end" method="post">
                         @csrf
                         <button class="submit__button">勤務終了</button>
                     </form>
                 </div>
                 <div class="break_start">
-                    <form action="/break_start" method="post">
+                    <form action="/break-start" method="post">
                         @csrf
                         <button class="submit__button">休憩開始</button>
                         <input type="hidden" name="id" value="{{ $record->id}}">
                     </form>
                 </div>
                 <div class="break_end">
-                    <form action="/break_end" method="post">
+                    <form action="/break-end" method="post">
                         @csrf
                         <button class="submit__button" type="submit" disabled>休憩終了</button>
                     </form>
@@ -96,25 +96,25 @@
                 @endif
                 @else
                 <div class="work__start">
-                    <form action="/work_start" method="post">
+                    <form action="/work-start" method="post">
                         @csrf
                         <button class="submit__button">勤務開始</button>
                     </form>
                 </div>
                 <div class="work__end">
-                    <form action="/work_end" method="post">
+                    <form action="/work-end" method="post">
                         @csrf
                         <button class="submit__button" disabled>勤務終了</button>
                     </form>
                 </div>
                 <div class="break_start">
-                    <form action="/break_start" method="post">
+                    <form action="/break-start" method="post">
                         @csrf
                         <button class="submit__button" disabled>休憩開始</button>
                     </form>
                 </div>
                 <div class="break_end">
-                    <form action="/break_end" method="post">
+                    <form action="/break-end" method="post">
                         @csrf
                         <button class="submit__button" type="submit" disabled>休憩終了</button>
                     </form>
