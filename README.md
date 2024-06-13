@@ -1,7 +1,7 @@
 # Atte
 ###### 概要:勤怠管理アプリ
 ![top-view](https://github.com/TsuneoHakoyama/Atte/assets/155647560/b9239e68-135f-47ea-b056-ac7cea2daa8b)
- 
+
 ## 作成目的
 ###### 人事評価に必要な勤怠管理アプリ導入のため
 
@@ -37,11 +37,11 @@
 
 ## ER図
 ![ER](https://github.com/TsuneoHakoyama/Atte/assets/155647560/0e5513f9-d347-40af-bb1d-2b4cfc012516)
-   
+
 ## 環境構築
 ###### Dockerビルド
 ###### 1. git clone git@github.com:TsuneoHakoyama/Atte.git
-###### 2. docker compose up -d --build 
+###### 2. docker compose up -d --build
 ###### Laravel環境構築
 ###### 1. docker compose exec php bash
 ###### 2. composer install
