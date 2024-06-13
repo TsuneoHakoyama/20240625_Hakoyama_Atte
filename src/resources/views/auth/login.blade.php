@@ -26,8 +26,8 @@
                 <input class="input__text" type="password" class="input__password" name="password" placeholder="パスワード" value="{{ old('password') }}">
             </div>
             <div class="error-message">
-                @if ($errors->has('email'))
-                {{ $errors->first('email')}}
+                @if ($errors->has('password'))
+                {{ $errors->first('password')}}
                 @endif
             </div>
             <div class=" input__button">

@@ -26,7 +26,7 @@ class LoginRequest extends FortifyLoginRequest
     {
         return [
             Fortify::username() => 'required|string|email|max:255',
-            'password' => 'required|min:8|max:255',
+            'password' => 'required|string|min:8|max:255',
         ];
     }
 

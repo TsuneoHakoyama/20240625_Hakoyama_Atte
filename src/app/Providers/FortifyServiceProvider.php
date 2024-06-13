@@ -3,19 +3,13 @@
 namespace App\Providers;
 
 use App\Actions\Fortify\CreateNewUser;
-use App\Actions\Fortify\ResetUserPassword;
-use App\Actions\Fortify\UpdateUserPassword;
-use App\Actions\Fortify\UpdateUserProfileInformation;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Str;
-use Laravel\Fortify\Contracts\LogoutResponse;
 use Laravel\Fortify\Fortify;
 use Laravel\Fortify\Http\Controllers\RegisteredUserController;
-
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -24,14 +18,6 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->instance(LogoutResponse::class, new class implements LogoutResponse
-        {
-            public function toResponse($request)
-            {
-                return redirect('/login');
-            }
-        });
-
         $this->app->singleton(
             RegisteredUserController::class,
             RegisterController::class,
@@ -60,6 +46,10 @@ class FortifyServiceProvider extends ServiceProvider
 
         Fortify::registerView(function() {
             return view('auth.register');
+        });
+
+        Fortify::verifyEmailView(function () {
+            return view('auth.verify-email');
         });
 
         Fortify::loginView(function() {

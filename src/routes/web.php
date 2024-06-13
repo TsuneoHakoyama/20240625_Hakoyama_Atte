@@ -1,10 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\BreakTimeController;
-use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,24 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::post('/register', [RegisterController::class, 'store']);
 
-Route::middleware('auth')->group(function () {
+Route::get('/email/verify', function () {
+    return view('auth.verify-email');
+})->middleware('auth')->name('verification.notice');
+
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+
+    return redirect('/');
+})->middleware(['auth', 'signed'])->name('verification.verify');
+
+Route::post('/email/verification-notification', function (Request $request) {
+    $request->user()->sendEmailVerificationNotification();
+
+    return back()->with('message', 'Verification link sent!');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
+Route::middleware(['auth','verified'])->group(function () {
     Route::get('/', [AttendanceController::class, 'show']);
     Route::get('/attendance', [AttendanceController::class, 'showTable']);
     Route::get('/attendance/previous', [AttendanceController::class, 'showTablePreviousDay']);
