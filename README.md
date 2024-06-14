@@ -45,7 +45,6 @@
 ###### Laravel環境構築
 ###### 1. docker compose exec php bash
 ###### 2. composer install
-###### 2. composer install
 ###### 3. composer create-project “laravel/Laravel=8.*” . –prefer-dist
 ###### 4. php artisan key:generate
 ###### 5. php artisan migrate --seed
