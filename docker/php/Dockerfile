@@ -1,5 +1,7 @@
 FROM php:7.4.9-fpm
 
+WORKDIR /var/www
+
 COPY php.ini /usr/local/etc/php/
 
 RUN apt update \
@@ -10,4 +12,6 @@ RUN curl -sS https://getcomposer.org/installer | php \
   && mv composer.phar /usr/local/bin/composer \
   && composer self-update
 
-WORKDIR /var/www
+ADD . /var/www/
+
+RUN chown -R www-data:www-data /var/www
