@@ -46,8 +46,8 @@
 ###### Laravel環境構築
 ###### 1. docker compose exec php bash
 ###### 2. composer install
-###### 3. php artisan migrate --seed
-###### 4. composer require laravel/fortify
-###### 5. php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
-###### 6. 
-###### 7. 
+###### 3. cp .env.sample .env
+###### 4. 環境変数の設定
+###### 5. php artisan migrate --seed
+###### 6. composer require laravel/fortify
+###### 7. php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
