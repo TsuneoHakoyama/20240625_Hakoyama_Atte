@@ -28,7 +28,8 @@
 ###### Docker Compose version v2.27.0
 ###### nginx 1.21.1
 ###### PHP 7.4.9
-###### Laravel 8.83.27
+###### Laravel 8.83.8
+###### fortify 1.19.1
 ###### MySQL 8.0.26
 ###### MailHog
 
@@ -45,8 +46,8 @@
 ###### Laravel環境構築
 ###### 1. docker compose exec php bash
 ###### 2. composer install
-###### 3. composer create-project “laravel/Laravel=8.*” . –prefer-dist
-###### 4. php artisan key:generate
+###### 3. cp .env.sample .env
+###### 4. 環境変数の設定
 ###### 5. php artisan migrate --seed
 ###### 6. composer require laravel/fortify
 ###### 7. php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
