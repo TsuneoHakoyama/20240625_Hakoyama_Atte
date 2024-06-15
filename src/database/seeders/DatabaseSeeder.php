@@ -17,10 +17,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        if (App::environment('local')) {
-            $this->call(UsersTableSeeder::class);
-            $this->call(AttendancesTableSeeder::class);
-            $this->call(BreakTimesTableSeeder::class);
-        }
+        
+        $this->call(UsersTableSeeder::class);
+        $this->call(AttendancesTableSeeder::class);
+        $this->call(BreakTimesTableSeeder::class);
+
     }
 }

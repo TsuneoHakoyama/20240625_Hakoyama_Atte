@@ -15,16 +15,6 @@ $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
-//.envファイル切り替え
-switch ($_SERVER['HTTP_HOST'] ?? 'localhost') {
-    case 'localhost':
-        $app->loadEnvironmentFrom('.env.develop');
-        break;
-
-    case 'production.domain':
-        $app->loadEnvironmentFrom('.env.production');
-        break;
-}
 
 /*
 |--------------------------------------------------------------------------
