@@ -38,9 +38,9 @@
 
 @section('content')
 <div class="table__form">
+    <div class="table__title">ユーザー名：{{ $user_name }}</div>
     <table class="user__attendance-table">
         <tr>
-            <th class="name">名前</th>
             <th class="date">勤務日</th>
             <th class="work__start">勤務開始</th>
             <th class="work__end">勤務終了</th>
@@ -49,7 +49,6 @@
         </tr>
         @foreach($attendances as $attendance)
         <tr>
-            <td class="name">{{ $attendance->user->name }}</td>
             <td class="date">{{ $attendance->work_start->format('Y/m/d') }}</td>
             <td class="work__start">{{ $attendance->work_start->format('H:i:s') }}</td>
             @if (is_null($attendance->work_end))
@@ -61,7 +60,7 @@
             @if ($attendance->breakTimes->isEmpty())
             <td class="break__total">00:00:00</td>
             @else
-            <td class="break___total">{{ $formattedTimes[$loop->index] }}</td>
+            <td class="break___total">{{ $formatted_times[$loop->index] }}</td>
             @endif
             <td class="working__hours">{{ $attendance['working_hours'] }}</td>
             @endif

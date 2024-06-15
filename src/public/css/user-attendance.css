@@ -11,10 +11,18 @@
 
 .table__form {
     width: 90vw;
-    height: 55vh;
+    height: 50vh;
     margin: 0 auto;
     padding: 20px 0;
     font-size: 28px;
+    font-weight: bold;
+}
+
+.table__title {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 30px;
     font-weight: bold;
 }
 
