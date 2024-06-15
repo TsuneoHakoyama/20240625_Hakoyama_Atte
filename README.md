@@ -48,6 +48,7 @@
 ###### 2. composer install
 ###### 3. cp .env.sample .env
 ###### 4. 環境変数の設定
-###### 5. php artisan migrate --seed
-###### 6. composer require laravel/fortify
-###### 7. php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
+###### 5. php artisan key:generate
+###### 6. php artisan migrate --seed
+###### 7. composer require laravel/fortify
+###### 8. php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
