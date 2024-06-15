@@ -41,8 +41,9 @@
 
 ## 環境構築
 ###### Dockerビルド
-###### 1. git clone git@github.com:TsuneoHakoyama/Atte.git
+###### 1. git clone git@github.com:TsuneoHakoyama/20240615_Hakoyama_Atte.git
 ###### 2. docker compose up -d --build
+
 ###### Laravel環境構築
 ###### 1. docker compose exec php bash
 ###### 2. composer install
