@@ -53,3 +53,4 @@
 ###### 6. php artisan migrate --seed
 ###### 7. composer require laravel/fortify
 ###### 8. php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
+###### 9. localhostアクセス時にpermission deniedのエラーが出る場合は"$ sudo chmod -R 777 src/*"を実行
