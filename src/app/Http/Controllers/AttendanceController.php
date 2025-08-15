@@ -16,7 +16,17 @@ class AttendanceController extends Controller
     public function show()
     {
         $user_id = Auth::user()->id;
-        $record = Attendance::with('breakTimes')->latest('work_start')->first();
+        $record = Attendance::with('breakTimes')
+            ->where('user_id', $user_id)
+            ->latest('work_start')
+            ->first();
+
+        if (empty($record)) {
+            $work_status = null;
+            $break_status = null;
+
+            return view('stamp', compact('work_status', 'break_status'));
+        }
 
         $work_start = optional($record)->work_start;
         $work_end = optional($record)->work_end;
@@ -104,7 +114,7 @@ class AttendanceController extends Controller
     {
         $date = Carbon::today()->format('Y-m-d');
         $attendances = Attendance::with(['user', 'breakTimes'])
-        ->whereDate('work_start', $date)
+            ->whereDate('work_start', $date)
             ->paginate(5);
 
         $formattedTimes = [];
